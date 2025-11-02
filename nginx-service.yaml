@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: nginx-service
 spec:
-  type: LoadBalancer
   selector:
     app: nginx
-    color: blue   # default active environment
+    color: blue   # initially points to blue deployment
   ports:
-  - port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer

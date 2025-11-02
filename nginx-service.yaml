@@ -6,8 +6,7 @@ spec:
   type: LoadBalancer
   selector:
     app: nginx
-    color: blue   # Start with BLUE version active
+    color: blue   # default active environment
   ports:
   - port: 80
     targetPort: 80
-
